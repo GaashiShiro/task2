@@ -8,7 +8,7 @@ const main = () => {
     document.body.onload = addElements;
 
     function addElements () {
-        const drawingDiv = document.createElement('div') //creates drawing area element
+        const drawingDiv = document.createElement('canvas') //creates drawing area element
         drawingDiv.style.cssText = 'position:fixed;top:0;width:100%;height:80%;margin:0;background:rgb(240, 240, 241)'
 
         const uiDiv = document.createElement('div') //creates ui element
