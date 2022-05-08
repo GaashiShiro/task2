@@ -1,7 +1,7 @@
-//import {createElement, setPosition} from "./lib01";
-//import {rct} from "./rct";
-import {circle} from "./circle";
-//import {pic} from "./pic";
+import {createElement, setPosition} from "./lib01.js";
+import {rct} from "./rct.js";
+import {circle} from "./circle.js";
+import {pic} from "./pic.js";
 
 const main = () => {
 
@@ -32,8 +32,8 @@ const main = () => {
  
     }
 
-    const circletest = circle ('50px');
-    document.body.append (circletest);
+    const circleTest = new circle ('50px');
+    
 
     
 

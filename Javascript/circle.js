@@ -1,9 +1,9 @@
-import {createElement} from './lib01';
+import {createElement, setPosition} from './lib01';
 
 class circle {
-    constructor(size) {
+    constructor(x, y, size) {
         this.elem = createElement();
-        
+        setPosition(this.elem, x, y);
         
         this.elem.style.width = size;
         this.elem.style.height = size;
