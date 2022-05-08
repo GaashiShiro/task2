@@ -1,14 +1,14 @@
-/*import {createElement, setPosition} from "./lib01";
-import {} from "./rct";
-import {} from "./circle";
-import {} from "./pic"; */
+//import {createElement, setPosition} from "./lib01";
+//import {rct} from "./rct";
+import {circle} from "./circle";
+//import {pic} from "./pic";
 
 const main = () => {
 
     document.body.onload = addElements;
 
     function addElements () {
-        const drawingDiv = document.createElement('canvas') //creates drawing area element
+        const drawingDiv = document.createElement('div') //creates drawing area element
         drawingDiv.style.cssText = 'position:fixed;top:0;width:100%;height:80%;margin:0;background:rgb(240, 240, 241)'
 
         const uiDiv = document.createElement('div') //creates ui element
@@ -21,13 +21,19 @@ const main = () => {
 
         const insertBt = document.createElement('button');
         insertBt.innerHTML = 'Insert'
-        insertBt.style.cssText = 'position: fixed; top: 87%; height: 5%;width:8%; right:1%'
+        insertBt.style.cssText = 'position: fixed; top: 88%; height: 25px; width:70px; right:1%'
+        document.body.appendChild (insertBt); //appends insert button
 
-        document.body.appendChild (insertBt, uiDiv);
-        
+
+        const rctBt = document.createElement('button');
+        rctBt.innerHTML = 'Rectangle'
+        rctBt.style.cssText = 'position: fixed; top: 88%; height: 25px; width:75px; left:45px'
+        document.body.appendChild (rctBt); //appends insert button
+ 
     }
 
-
+    const circletest = circle ('50px');
+    document.body.append (circletest);
 
     
 
