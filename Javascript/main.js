@@ -1,6 +1,6 @@
 import {createElement, setPosition} from "./lib01.js";
 import {rct} from "./rct.js";
-import {circle} from "./circle.js";
+import {Circle} from "./circle.js";
 import {pic} from "./pic.js";
 
 const main = () => {
@@ -26,15 +26,20 @@ const main = () => {
     shapeSelect.style.cssText = 'position: fixed; top: 88%; height: 25px; width:90px; left:45px';
     uiDiv.appendChild (shapeSelect);
 
+    const empty = document.createElement ('option')
+    empty.id = '';
+    empty.innerHTML = 'Select One';
+    shapeSelect.appendChild(empty);
+
     const rect = document.createElement ('option')
     rect.id = 'rect';
     rect.innerHTML = 'Rectangle';
     shapeSelect.appendChild(rect);
 
-    const circle = document.createElement ('option')
-    circle.id = 'circle';
-    circle.innerHTML = 'Circle';
-    shapeSelect.appendChild(circle);
+    const crcl = document.createElement ('option')
+    crcl.id = 'circle';
+    crcl.innerHTML = 'Circle';
+    shapeSelect.appendChild(crcl);
 
     const pic = document.createElement ('option')
     pic.id = 'pic';
@@ -45,16 +50,36 @@ const main = () => {
     picker.type = 'color';
     picker.id   = 'color-picker';
     picker.value= '#ff0000' //Default color
-    picker.style.cssText = 'position: fixed; top: 88%; height: 25px; width:25px;right:155px; border:0px;border-radius: 15px; padding:0; overflow:hidden'
+    picker.style.cssText = 'position: fixed; top: 88.25%; height: 25px; width:25px;left:70%; border:0px;border-radius: 15px; padding:0; overflow:hidden'
     uiDiv.appendChild(picker);
 
- 
-    insertBt.addEventListener ("click", (e) => {
-            console.log('clicked')
+    const coordX = document.createElement ('input')
+    coordX.style.cssText = 'position: fixed; top: 88%; height: 25px; width:90px; left:30%'
+    uiDiv.appendChild(coordX);
+
+    const coordY = document.createElement ('input')
+    coordY.style.cssText = 'position: fixed; top: 88%; height: 25px; width:90px; left:50%'
+    uiDiv.appendChild(coordY);
+
+    const shape = shapeSelect.addEventListener ('change', (e) => {
+        const shapeSelected = e.target.value
+        console.log(shapeSelected)
     })
+    
+    
+    const c1 = new Circle(50,50);
+    drawingDiv.appendChild(c1);
 
-    shapeSelect.addEventListener ('change', (e) => {}) 
-
+    /*insertBt.addEventListener ('click', (e) => {
+        console.log('clicked')
+        if (shape.value == 'Rectangle') {
+            drawingDiv.appendChild(document.createElement(rct));
+        }
+        else if (shape.value == 'Circle') {
+            
+        }
+    }) */
+        
 }
 
 main ();
