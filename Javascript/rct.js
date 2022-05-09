@@ -1,4 +1,4 @@
-import {createElement} from './lib01';
+import {createElement} from './lib01.js';
 
 class rct {
     constructor(width, height, color) {

@@ -1,4 +1,4 @@
-import {createElement, setPosition} from './lib01';
+import {createElement, setPosition} from './lib01.js';
 
 class pic {
     constructor(x, y) {
