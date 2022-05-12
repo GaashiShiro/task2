@@ -1,5 +1,5 @@
 import {createElement, setPosition} from "./lib01.js";
-import {rct} from "./rct.js";
+import {Rct} from "./rct.js";
 import {Circle} from "./circle.js";
 import {pic} from "./pic.js";
 
@@ -66,9 +66,13 @@ const main = () => {
         console.log(shapeSelected)
     })
     
+    /*const c1 = new Circle(50,50, 100);
+    console.log(c1.elem);
+    drawingDiv.appendChild(c1.elem);*/
+
     
-    const c1 = new Circle(50,50);
-    drawingDiv.appendChild(c1);
+
+
 
     /*insertBt.addEventListener ('click', (e) => {
         console.log('clicked')

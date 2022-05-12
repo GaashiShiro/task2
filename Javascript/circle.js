@@ -1,14 +1,15 @@
 import {createElement, setPosition} from './lib01.js';
 
 class Circle {
-    constructor(x, y) {
+    constructor(x, y, size) {
         this.elem = createElement();
         setPosition(this.elem, x, y);
-        //size = "0px";
-        this.elem.style.width = 100;
-        this.elem.style.height = 100;
-        this.elem.style.borderRadius = '100%';
+        
+        this.elem.style.width           = size + 'px';
+        this.elem.style.height          = size + 'px';
+        this.elem.style.borderRadius    = size + 'px';
         this.elem.style.backgroundColor = 'red';
+        
 
     }
 
