@@ -11,7 +11,7 @@ const setPosition = (elem, x, y) => {
 }
 
 const createImg = () => {
-    let element = document.createElement('image');
+    let element = document.createElement('img');
     document.body.appendChild(element);
     return element;
 }

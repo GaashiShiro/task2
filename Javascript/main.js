@@ -81,6 +81,7 @@ const main = () => {
     picture.style.cssText = 'position: fixed; top: 88%; height: 25px; width:90px; left:75%'
     uiDiv.appendChild(picture);
     picture.hidden = true;
+    console.log(picture)
     
 
     var shape = shapeSelect.addEventListener ('change', (e) => { //selects shapes, enables/disable inputs
@@ -116,8 +117,9 @@ const main = () => {
             const c1 = new Circle(coordX.value,coordY.value, size1.value, picker.value);
             drawingDiv.appendChild(c1.elem);
         } else if (shape == 'Picture') {
-            const p1 = new Pic (coordX.value, coordY.value, size1.value, size2.value);
-            drawingDiv.appendChild(p1.elem);
+            const img = new Image (coordX.value, coordY.value, size1.value, size2.value);
+            img.src = picture.value;
+            drawingDiv.appendChild(img);
         }
     })
 
