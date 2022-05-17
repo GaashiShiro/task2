@@ -117,7 +117,7 @@ const main = () => {
             const c1 = new Circle(coordX.value,coordY.value, size1.value, picker.value);
             drawingDiv.appendChild(c1.elem);
         } else if (shape == 'Picture') {
-            const img = new Image (coordX.value, coordY.value, size1.value, size2.value);
+            const img = new Image (coordX.value, coordY.value);
             img.src = picture.value;
             drawingDiv.appendChild(img);
         }
