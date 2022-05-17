@@ -1,8 +1,9 @@
-import {createElement} from './lib01.js';
+import {createElement, setPosition} from './lib01.js';
 
 class Rct {
-    constructor(width, height, color) {
+    constructor(x, y, width, height, color) {
         this.elem = createElement();
+        setPosition(this.elem, x, y);
         
         this.elem.style.width = width + 'px';
         this.elem.style.height = height + 'px';
@@ -11,7 +12,7 @@ class Rct {
             console.log('This is a rectangle not a square');
         };
     
-        this.elem.style.color = color;
+        this.elem.style.backgroundColor = color;
     
     }
 
