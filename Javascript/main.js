@@ -78,10 +78,17 @@ const main = () => {
 
     const picture = document.createElement ('input')
     picture.type = 'file';
-    picture.style.cssText = 'position: fixed; top: 88%; height: 25px; width:90px; left:75%'
+    picture.style.cssText = 'position: fixed; top: 85%; height: 25px; width:90px; left:75%'
     uiDiv.appendChild(picture);
     picture.hidden = true;
-    console.log(picture)
+
+
+    const rotation = document.createElement ('input')
+    rotation.style.cssText = 'position: fixed; top: 90%; height: 15px; width:90px; left:75%'
+    rotation.placeholder = 'Rotate';
+    uiDiv.appendChild(rotation);
+    
+
     
 
     var shape = shapeSelect.addEventListener ('change', (e) => { //selects shapes, enables/disable inputs
@@ -109,6 +116,7 @@ const main = () => {
         
     insertBt.addEventListener ('click', (e) => {
         console.log('clicked')
+        console.log(rotation)
         //console.log(shape)
        if (shape == 'Rectangle') {
             const r1 = new Rct (coordX.value, coordY.value, size1.value, size2.value, picker.value)
